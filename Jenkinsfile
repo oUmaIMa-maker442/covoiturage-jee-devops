@@ -22,11 +22,14 @@ pipeline {
     }
 
     post {
+        always {
+            junit 'target/surefire-reports/*.xml'
+        }
         success {
-            echo 'Build Maven terminé avec succès'
+            echo 'Build et tests terminés avec succès'
         }
         failure {
-            echo 'Échec du build Maven'
+            echo 'Échec du build ou des tests'
         }
     }
 }
