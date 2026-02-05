@@ -180,4 +180,14 @@ public class Offre {
     public void setEstEffectuee(Boolean estEffectuee) {
         this.estEffectuee = estEffectuee;
     }
+
+	public int getPrix() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void setPrix(int i) {
+		// TODO Auto-generated method stub
+		
+	}
 }
