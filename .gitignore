@@ -1,1 +1,16 @@
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Tomcat / Eclipse Servers
+Servers/
+
+# Build
 /build/
+/bin/
+/target/
+
+# OS
+.DS_Store
+Thumbs.db
