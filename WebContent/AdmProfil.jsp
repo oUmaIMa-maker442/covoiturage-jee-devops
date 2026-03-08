@@ -312,23 +312,23 @@ Administrateur administrateur = (Administrateur) session.getAttribute("utilisate
                 
                 <div class="form-grid">
                     <div class="form-group">
-                        <label>Prénom</label>
-                        <input type="text" name="prenom" value="<%= administrateur.getPrenom() %>" required>
+                        <label for="Prénom">Prénom</label>
+                        <input type="text" name="prenom" id="Prénom" value="<%= administrateur.getPrenom() %>" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Nom</label>
-                        <input type="text" name="nom" value="<%= administrateur.getNom() %>" required>
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" value="<%= administrateur.getNom() %>" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" value="<%= administrateur.getEmail() %>" required>
+                        <label for="Email">Email</label>
+                        <input type="email" name="email" id="Email" value="<%= administrateur.getEmail() %>" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Téléphone</label>
-                        <input type="tel" name="telephone" value="<%= administrateur.getTelephone() %>" required>
+                        <label for="Téléphone">Téléphone</label>
+                        <input type="tel" name="telephone" id="Téléphone" value="<%= administrateur.getTelephone() %>" required>
                     </div>
                 </div>
                 
@@ -368,8 +368,8 @@ Administrateur administrateur = (Administrateur) session.getAttribute("utilisate
                     </div>
                     
                     <div class="form-group">
-                        <label>Confirmer le Mot de Passe</label>
-                        <input type="password" name="confirmerMotDePasse" required minlength="6">
+                        <label for="confirmer">Confirmer le Mot de Passe</label>
+                        <input type="password" id="confirmer" name="confirmerMotDePasse" required minlength="6">
                     </div>
                 </div>
                 
