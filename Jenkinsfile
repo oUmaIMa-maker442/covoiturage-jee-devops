@@ -20,9 +20,9 @@ pipeline {
             }
         }
         stage('SonarQube Analysis') {
-            steps {
-                bat 'mvn sonar:sonar -Dsonar.projectKey=covoiturage-jee -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin'
-            }
+           steps {
+                bat 'mvn sonar:sonar -Dsonar.projectKey=covoiturage-jee -Dsonar.host.url=http://localhost:9005 -Dsonar.login=admin -Dsonar.password=admin'
+             }
         }
     }
     post {
