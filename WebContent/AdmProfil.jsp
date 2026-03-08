@@ -358,13 +358,13 @@ Administrateur administrateur = (Administrateur) session.getAttribute("utilisate
                 
                 <div class="form-grid">
                     <div class="form-group">
-                        <label>Mot de Passe Actuel</label>
-                        <input type="password" name="ancienMotDePasse" required>
+                        <label for="mdp">Mot de Passe Actuel</label>
+                        <input type="password" id="mdp" name="ancienMotDePasse" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Nouveau Mot de Passe</label>
-                        <input type="password" name="nouveauMotDePasse" required minlength="6">
+                        <label for="mdp_new">Nouveau Mot de Passe</label>
+                        <input type="password" id="mdp_new" name="nouveauMotDePasse" required minlength="6">
                     </div>
                     
                     <div class="form-group">
