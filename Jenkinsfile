@@ -1,29 +1,32 @@
 pipeline {
     agent any
-
     triggers {
         githubPush()
     }
-
     stages {
-
         stage('Checkout SCM') {
             steps {
                 checkout scm
             }
         }
-
         stage('Build & Test with Maven') {
             steps {
-                // Exécute les tests SANS bloquer le pipeline
                 bat 'mvn clean test -Dmaven.test.failure.ignore=true'
             }
         }
+        stage('Package WAR') {
+            steps {
+                bat 'mvn package -DskipTests'
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                bat 'mvn sonar:sonar -Dsonar.projectKey=covoiturage-jee -Dsonar.host.url=http://localhost:9000 -Dsonar.login=admin -Dsonar.password=admin'
+            }
+        }
     }
-
     post {
         always {
-            // Publier les résultats des tests dans Jenkins
             junit 'target/surefire-reports/*.xml'
         }
         success {
