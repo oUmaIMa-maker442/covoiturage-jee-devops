@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covoiturage-deployment
+  labels:
+    app: covoiturage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: covoiturage
+  template:
+    metadata:
+      labels:
+        app: covoiturage
+    spec:
+      containers:
+      - name: covoiturage
+        image: oumaimalah/covoiturage-jee:1.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
